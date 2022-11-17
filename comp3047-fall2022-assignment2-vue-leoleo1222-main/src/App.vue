@@ -44,8 +44,8 @@
     </div>
   </nav>
   <div class="container text-start">
-  <router-view />
-</div>
+    <router-view />
+  </div>
 </template>
 
 <script>

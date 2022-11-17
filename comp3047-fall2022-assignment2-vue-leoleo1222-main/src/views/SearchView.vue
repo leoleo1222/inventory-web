@@ -1,6 +1,5 @@
 <template>
-  asdasdsad
-  <GeneralUse :type="$route.params.type" navbar="true" breadcrumb_type="true" />
+  <GeneralUse :type="$route.query.title" navbar="true" breadcrumb_type="true" />
   <div>
     <!-- {{ $route.params.type }} -->
     <!-- boostrap create six card and three cards in a row-->

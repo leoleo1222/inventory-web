@@ -43,7 +43,7 @@ router.get('/bookings', async function (req, res) {
 
 });
 
-module.exports = router;
+
 
 /* Display a single Booking */
 router.get('/bookings/read/:id', async function (req, res) {
@@ -297,3 +297,5 @@ router.post('/api/inventory', async function (req, res) {
   res.status(201).json({ id: result.insertedId });
 
 });
+
+module.exports = router;

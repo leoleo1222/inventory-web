@@ -10,7 +10,13 @@
   </div>
 
   <!-- Use the component GeneralUse-->
-  <GeneralUse navbar="true" />
+  <nav aria-label="breadcrumb" v-if="breadcrumb_type || breadcrumb_detail">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <router-link to="/">Home</router-link>
+      </li>
+    </ol>
+  </nav>
 
   <div class="container my-5">
     <div class="card-group">
@@ -37,36 +43,36 @@
 
 
   <div class="card-group">
-    <div class="card" style="width: 18rem">
+    <div class="card text-center" style="width: 18rem">
       <router-link :to="'/books'">
-        <img src="https://openclipart.org/image/800px/svg_to_png/275692/1489798288.png" class="card-img-top" alt="" style="height:50px; width:50px" />
+        <img src="https://openclipart.org/image/800px/svg_to_png/275692/1489798288.png" class="card-img-top" alt="" />
       </router-link>
       <div class="card-body">
         <h5 class="card-title">Books</h5>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem">
+    <div class="card text-center">
       <router-link :to="'/games'">
-        <img src="https://th.bing.com/th/id/OIP.yBUPi-O0m7PEslfN4PvkNQHaHa?pid=ImgDet&rs=1" class="card-img-top" alt="" style="height:50px; width:50px" />
+        <img src="https://th.bing.com/th/id/OIP.yBUPi-O0m7PEslfN4PvkNQHaHa?pid=ImgDet&rs=1" class="card-img-top" alt="" />
       </router-link>
       <div class="card-body">
         <h5 class="card-title">Games</h5>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem">
+    <div class="card text-center">
       <router-link :to="'/gifts'">
-        <img src="https://th.bing.com/th/id/R.7a9fcb9a4c22dc97c2dab447728c3886?rik=pSz4GEHpHszHsA&pid=ImgRaw&r=0" class="card-img-top" alt="" style="height:50px; width:50px" />
+        <img src="https://th.bing.com/th/id/R.7a9fcb9a4c22dc97c2dab447728c3886?rik=pSz4GEHpHszHsA&pid=ImgRaw&r=0" class="card-img-top" alt="" />
       </router-link>
       <div class="card-body">
         <h5 class="card-title">Gifts</h5>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem">
+    <div class="card text-center">
       <router-link :to="'/materials'">
-        <img src="https://cdn4.iconfinder.com/data/icons/STROKE/project_managment/png/400/materials.png" class="card-img-top" alt="" style="height:50px; width:50px" />
+        <img src="https://cdn4.iconfinder.com/data/icons/STROKE/project_managment/png/400/materials.png" class="card-img-top" alt="" />
       </router-link>
       <div class="card-body">
         <h5 class="card-title">Materials</h5>
@@ -78,12 +84,10 @@
 <script>
 // @ is an alias to /src
 import { ref, onMounted } from "vue";
-import GeneralUse from "@/components/GeneralUse.vue";
 
 export default {
   name: 'HomeView',
   components: {
-    GeneralUse,
 
   },
   setup() {
